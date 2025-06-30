@@ -1,24 +1,22 @@
-div{
-    background-color: red;
+body{
     display: flex;
     flex-direction: column;
-    flex-shrink: 1;
-    border: 10px;
-    width: 100px;
-    height: 100px;
 }
 
-#container{
-    background-color: aqua;
+.div-container {
+    margin: 0 1px 1px 0;
+    display: flex;
+    flex-shrink: 0;
 }
 
-body{
-    background-color: rebeccapurple;
-}
-
-.div-style{
-    width: 5em;
-    height: 2em;
+.div-style {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
     box-shadow: 0px 0px 10px grey;
     margin: 0 1px 1px 0;
+}
+
+.div-style:hover{
+    background-color: blueviolet;
 }
