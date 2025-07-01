@@ -21,14 +21,20 @@ function createContainer() {
 }
 
 function gridSize() {
-    let size = prompt("Please enter the dimensions of your grid");
-    if (size < 101) {
+    let size = prompt("Please enter the dimensions of your grid", 16);
+    if(size <= 0){
+        alert("The dimensions of the grid can't be less than 1");
+        gridDimensions = 16;
+    } 
+    else if (size < 101) {
         gridDimensions = size;
+        console.log(size);
         divContainer.innerHTML = ""; 
         for (let i = 0; i < gridDimensions; i++) {
             createContainer();
         }
-    } else {
+    }
+    else {
         alert("The dimensions of the grid can't excede 100");
     }
 }
